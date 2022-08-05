@@ -255,7 +255,7 @@ submit.addEventListener('click', function (e) {
   }
 })
 // ------------DATA API-----------\
-let URLAPI = 'https://62e9f8cd01787ec7121f13ae.mockapi.io/Hospital';
+const URLAPI = 'https://62e9f8cd01787ec7121f13ae.mockapi.io/Hospital';
 
 async function star() {
   let kq = await getCourses();
@@ -304,7 +304,7 @@ function renderCourses(courses) {
 }
 // -------------CreateCourse--------------
 async function createCourse(data) {
-  let options = {
+  const options = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
