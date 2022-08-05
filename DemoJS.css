@@ -1,0 +1,266 @@
+body {
+    font-size: 18px;
+    line-height: 35px;
+    letter-spacing: 0em;
+    font-family: Nunito, sans-serif;
+    color: #002f6b;
+    background-color: rgb(244, 249, 255);
+    /* chuẩn phông chữ cho toàn bộ trang */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ----------Sử dụng chung---------- */
+.container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 24px;
+}
+
+.mb10 {
+    margin-bottom: 5px;
+}
+
+.input-text {
+    margin-bottom: 20px;
+}
+
+.box-input {
+    background-clip: padding-box;
+    background-image: none;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    color: #495057;
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    max-width: 100%;
+    padding: 6px 12px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 100%;
+
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.error {
+    font-size: 12px;
+    margin-top: 4px;
+    color: #f56c6c;
+    display: none;
+}
+
+/* ----------Sử dụng riêng---------- */
+/* HEADER  */
+.text-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.text-header>span {
+    color: #076ad4;
+    display: inline;
+    line-height: 35px;
+}
+
+.text-header>h1 {
+    color: #004192;
+    font-size: 40px;
+    line-height: 51px;
+}
+
+.text-header>p {
+    color: #002f6b;
+    font-size: 18px;
+    line-height: 35px;
+    margin: 5px 0 18px;
+}
+
+/* BODY  */
+.demo-head-wrap {
+    background: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    max-width: 840px;
+    margin: 0 auto 20px;
+}
+
+.demo-head {
+    background: #7c56ff;
+    display: block;
+    padding: 15px 30px;
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.demo-head>h2 {
+    float: left;
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 41px;
+    /* font-family: Nunito, sans-serif; */
+}
+
+.demo-action {
+    float: right;
+}
+
+.demo-action a:hover {
+    background-color: #441D99;
+    color: white;
+}
+
+.demo-btn {
+    text-decoration: none;
+    color: black;
+    background: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+    border-radius: 3px;
+}
+
+/* BODY INPUT  */
+.demo-body {
+    padding: 30px 50px;
+}
+
+.name-element {
+    display: flex;
+    width: 100%;
+}
+
+/* NAME  */
+.first-name {
+    padding-right: 15px;
+    vertical-align: inherit;
+    width: 100%;
+}
+
+.content-first-name {
+
+    margin-bottom: 20px;
+
+}
+
+.last-name {
+
+    padding-left: 15px;
+    vertical-align: inherit;
+    width: 100%;
+
+}
+
+.content-last-name {
+
+    margin-bottom: 20px;
+
+}
+
+/* Patient Age */
+.title-age label::after {
+    content: '*';
+    margin-left: 3px;
+    color: red;
+}
+
+/* Patient Gender */
+.title-gender label::after {
+    content: '*';
+    margin-left: 3px;
+    color: red;
+}
+
+/* PHONE  */
+.title-phone-no label::after {
+    content: '*';
+    margin-left: 3px;
+    color: red;
+}
+
+/* Retired?  */
+.title-retired label::after {
+    content: '*';
+    margin-left: 3px;
+    color: red;
+}
+
+/* DATE  */
+#date-hide {
+    display: none;
+}
+
+/* <!-- Marital Status --> */
+.title-status label::after {
+    content: '*';
+    margin-left: 3px;
+    color: red;
+}
+
+/* Disability  */
+.title-disability label::after {
+    content: '*';
+    margin-left: 3px;
+    color: red;
+}
+
+
+/* Marital status(other) */
+.title-status-other label::after {
+    content: '*';
+    margin-left: 3px;
+    color: red;
+}
+
+/* Personal opinion */
+.submit {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.submit button:hover {
+    background-color: #76b3f0b2;
+}
+
+#button-submit {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 7px 22px 0px rgba(0, 0, 0, 0.25);
+    background-color: #409EFF;
+    color: #ffffff;
+}
+
+.header-data {
+    text-align: center;
+}
+
+.data {
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 58px;
+    border: 1px solid black;
+}

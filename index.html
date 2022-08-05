@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./DemoJS.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="inner-wrap">
+            <div class="primary">
+                <div class="content container">
+                    <div class="main">
+                        <div class="text-header">
+                            <span>Fluent Forms Template Library</span>
+                            <h1>Patient Intake Form Template</h1>
+                            <p>Take this form to investigate your patient before admission</p>
+                        </div>
+                        <div class="demo-head-wrap">
+                            <div class="demo-head">
+                                <h2>Patient Intake Form</h2>
+                                <div class="demo-action">
+                                    <a class="demo-btn" href="#download">Download</a>
+                                </div>
+                            </div>
+                            <div class="demo-body">
+                                <div class="content-body">
+                                    <div class="name-element">
+                                        <!-- Full Name  -->
+                                        <div class="first-name">
+                                            <div class="content-first-name">
+                                                <div class="mb10 title-first"><label for="fname">First Name</label>
+                                                </div>
+                                                <div class="input-first"><input id="fname" class="box-input"
+                                                        type="text"></div>
+                                            </div>
+                                        </div>
+                                        <div class="last-name">
+                                            <div class="content-last-name">
+                                                <div class="mb10 title-last"><label for="lname">Last Name</label></div>
+                                                <div class="input-last"><input id="lname" class="box-input" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Patient Age -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-age">
+                                            <label for="patient-age">Patient Age </label>
+                                        </div>
+                                        <div class="input-age">
+                                            <input id="patient-age" class="box-input" value="name" type="number"
+                                                onblur="checkblur1()">
+                                            <div id="text-error1" class="error">This field is required</div>
+                                        </div>
+                                    </div>
+                                    <!-- Prefered Name / Nickname -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-nickname">
+                                            <label for="nick-name">Prefered Name / Nickname </label>
+                                        </div>
+                                        <div class="input-nickname">
+                                            <input id="nick-name" class="box-input" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- Patient Gender -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-gender">
+                                            <label for="patient-gender">Patient Gender </label>
+                                        </div>
+                                        <div class="input-gender">
+                                            <select id="patient-gender" class="box-input" onblur="checkblur2()">
+                                                <option value="- Select -">- Select -</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="Others">Others</option>
+                                            </select>
+                                            <div id="text-error2" class="error">This field is required</div>
+                                        </div>
+                                    </div>
+                                    <!-- Phone no. -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-phone-no">
+                                            <label for="phone">Phone no. </label>
+                                        </div>
+                                        <div class="input-p">
+                                            <input id="phone" class="box-input" type="number" onblur="checkblur3()">
+                                            <div id="text-error3" class="error">This field is required
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Spouce Name -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-spouce">
+                                            <label for="spouce-name">Spouce Name </label>
+                                        </div>
+                                        <div class="input-spouce">
+                                            <input id="spouce-name" class="box-input" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- With whome do you live? -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-live">
+                                            <label for="live">With whome do you live? </label>
+                                        </div>
+                                        <div class="input-live">
+                                            <input id="live" class="box-input" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- Marital Status -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-status">
+                                            <label for="input-status">Marital Status </label>
+                                        </div>
+                                        <div id="input-status">
+                                            <div class="option-1">
+                                                <input id="itemstatus1" class="cursor" type="radio" name="status">
+                                                <label for="itemstatus1" class="cursor">
+                                                    <span>Married</span>
+                                                </label>
+                                            </div>
+                                            <div class="option-2">
+                                                <input id="itemstatus2" class="cursor" type="radio" name="status">
+                                                <label for="itemstatus2" class="cursor">
+                                                    <span>Unmarried</span>
+                                                </label>
+                                            </div>
+                                            <div class="option-3">
+                                                <input id="itemstatus3" class="cursor" type="radio" name="status">
+                                                <label for="itemstatus3" class="cursor">
+                                                    <span>other</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div id="text-error5" class="error">This field is required
+                                        </div>
+                                    </div>
+                                    <!-- Marital status(other) -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-status-other">
+                                            <label for="status-other">Marital status(other) </label>
+                                        </div>
+                                        <div class="input-status-other">
+                                            <input id="status-other" class="box-input" type="text"
+                                                onblur="checkblur4()">
+                                            <div id="text-error4" class="error">This field is required</div>
+                                        </div>
+                                    </div>
+                                    <!-- Occupation -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-occupation">
+                                            <label for="occupation">Occupation </label>
+                                        </div>
+                                        <div class="input-occupation">
+                                            <input id="occupation" class="box-input" type="text"
+                                                placeholder="If retired or disabled enter your last occupation">
+                                        </div>
+                                    </div>
+                                    <!-- Retired? -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-retired">
+                                            <label for="item-retired1">Retired? </label>
+                                        </div>
+                                        <div id="input-retired">
+                                            <div class="option-1">
+                                                <input id="yes" class="cursor" type="radio" name="retired" value="yes">
+                                                <label for="yes" class="cursor">
+                                                    <span>Yes</span>
+                                                </label>
+                                            </div>
+                                            <div class="option-2">
+                                                <input id='no' class=" cursor" type="radio" name="retired" value="no">
+                                                <label for="no" class="cursor">
+                                                    <span>No</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div id="text-error6" class="error">This field is required
+                                        </div>
+                                    </div>
+                                    <!-- DATE -->
+                                    <div id="date-hide">
+                                        <div class="input-text">
+                                            <div class="mb10 title-date">
+                                                <label for="date">Date of retirement </label>
+                                            </div>
+                                            <div class="input-date">
+                                                <input id="date" class="box-input" value="name" type="date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Disability ? -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-disability">
+                                            <label for="item-disability1">Disability ? </label>
+                                        </div>
+                                        <div id="input-disability">
+                                            <div class="option-1">
+                                                <input id="yes1" class="cursor" type="radio" name="disability">
+                                                <label for="yes1" class="cursor">
+                                                    <span>Yes</span>
+                                                </label>
+                                            </div>
+                                            <div class="option-2">
+                                                <input id='no1' class=" cursor" type="radio" name="disability">
+                                                <label for=" item-disability2" class="cursor">
+                                                    <span>No</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div id="text-error7" class="error">This field is required
+                                        </div>
+                                    </div>
+                                    <!-- Who is your primary care doctor: -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-doctor">
+                                            <label for="doctor">Who is your primary care doctor: </label>
+                                        </div>
+                                        <div class="input-doctor">
+                                            <input id="doctor" class="box-input" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- Where is your primary care doctor located ? -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-doctor-located">
+                                            <label for="doctor-located">Where is your primary care doctor located ?
+                                            </label>
+                                        </div>
+                                        <div class="input-doctor-located">
+                                            <input id="doctor-located" class="box-input" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- Phone Number of primary care doctor: -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-phone-doctor">
+                                            <label for="phone-doctor">Phone Number of primary care doctor: </label>
+                                        </div>
+                                        <div class="input-phone-doctor">
+                                            <input id="phone-doctor" class="box-input" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- allergic to any medications -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-medications">
+                                            <label for="item-medications1">allergic to any medications </label>
+                                        </div>
+                                        <div class="input-medications">
+                                            <div class="option-1">
+                                                <input id="yes2" class="cursor" type="radio" name="sex">
+                                                <label for="yes2" class="cursor">
+                                                    <span>Yes</span>
+                                                </label>
+                                            </div>
+                                            <div class="option-2">
+                                                <input id="no2" class="cursor" type="radio" name="sex">
+                                                <label for="no2" class="cursor">
+                                                    <span>No</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Do you smoke? -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-smoke">
+                                            <label for="item-smoke1">Do you smoke? </label>
+                                        </div>
+                                        <div class="input-smoke">
+                                            <div class="option-1">
+                                                <input id="yes3" class="cursor" type="radio" name="smoke">
+                                                <label for="yes3" class="cursor">
+                                                    <span>Yes</span>
+                                                </label>
+                                            </div>
+                                            <div class="option-2">
+                                                <input id="no3" class="cursor" type="radio" name="smoke">
+                                                <label for="no3" class="cursor">
+                                                    <span>No</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- If you quit, when did you stop? -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-stop">
+                                            <label for="stop">If you quit, when did you stop? </label>
+                                        </div>
+                                        <div class="input-stop">
+                                            <input id="stop" class="box-input" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- Do you drink alcohol? -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-alcohol">
+                                            <label for="alcohol">Do you drink alcohol? </label>
+                                        </div>
+                                        <div class="input-alcohol">
+                                            <input id="alcohol" class="box-input" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- Personal opinion -->
+                                    <div class="input-text">
+                                        <div class="mb10 title-Personal">
+                                            <label for="Personal">Personal opinion </label>
+                                        </div>
+                                        <div class="input-Personal">
+                                            <textarea id="Personal" class="box-input" id="personal" cols="30"
+                                                rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- Submit -->
+                                    <div class="submit">
+                                        <button type="submit" id="button-submit">Submit Form</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="showdata">
+            <ul id="data"></ul>
+
+        </div>
+
+    </div>
+    <script src="./DemoJS.js"></script>
+</body>
+
+</html>
