@@ -273,6 +273,7 @@ async function getCourses() {
 }
 // -------------RENDER-DATA--------------
 function renderCourses(courses) {
+  git
   var datalist = document.querySelector('#data');
   var htmls = courses.map(function (course) {
     return `
