@@ -341,7 +341,7 @@ function handleSubmit() {
       DoYouSmoke: checkValueSmoke,
       Stop: stop.value,
       DrinkAlcohol: alcohol.value,
-      PersonalOpinion: personal.value,
+      PersonalOpinion: personal.value
     };
     createCourse(formData, function () {
       getCourses(renderCourses);
