@@ -267,7 +267,7 @@ async function getCourses() {
   let res = await fetch(URLAPI)
   let kq = await res.json();
   console.log(kq);
-  return kq; S
+  return kq; 
 }
 // -------------RENDER-DATA--------------
 function renderCourses(courses) {
