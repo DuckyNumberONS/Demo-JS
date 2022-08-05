@@ -257,18 +257,19 @@ submit.addEventListener('click', function (e) {
 // ------------DATA API-----------\
 var URLAPI = 'https://62e9f8cd01787ec7121f13ae.mockapi.io/Hospital';
 
-function star() {
-  getCourses(renderCourses);
+async function star() {
+  let kq = await getCourses();
+  renderCourses(kq);
   handleSubmit();
 }
 star();
 
-function getCourses(callback) {
-  fetch(URLAPI)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(callback);
+async function getCourses() {
+  let res = await fetch(URLAPI)
+  let kq = await res.json();
+  console.log(kq);
+  return kq;
+
 }
 // -------------RENDER-DATA--------------
 function renderCourses(courses) {
@@ -341,10 +342,11 @@ function handleSubmit() {
       DoYouSmoke: checkValueSmoke,
       Stop: stop.value,
       DrinkAlcohol: alcohol.value,
-      PersonalOpinion: personal.value
+      PersonalOpinion: personal.value,
     };
-    createCourse(formData, function () {
-      getCourses(renderCourses);
+    createCourse(formData, async function () {
+      let kq = await getCourses();
+      renderCourses(kq);
     });
   }
 }
