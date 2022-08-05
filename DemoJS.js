@@ -255,12 +255,11 @@ submit.addEventListener('click', function (e) {
   }
 })
 // ------------DATA API-----------\
-var URLAPI = 'https://62e9f8cd01787ec7121f13ae.mockapi.io/Hospital';
+let URLAPI = 'https://62e9f8cd01787ec7121f13ae.mockapi.io/Hospital';
 
 async function star() {
   let kq = await getCourses();
   renderCourses(kq);
-  handleSubmit();
 }
 star();
 
@@ -268,13 +267,12 @@ async function getCourses() {
   let res = await fetch(URLAPI)
   let kq = await res.json();
   console.log(kq);
-  return kq;
-
+  return kq; S
 }
 // -------------RENDER-DATA--------------
 function renderCourses(courses) {
-  var datalist = document.querySelector('#data');
-  var htmls = courses.map(function (course) {
+  let datalist = document.querySelector('#data');
+  let htmls = courses.map(function (course) {
     return `
     <li>
       <h4 class="header-data">DATA</h4>
@@ -305,48 +303,42 @@ function renderCourses(courses) {
   datalist.innerHTML = htmls.join('');
 }
 // -------------CreateCourse--------------
-function createCourse(data, callback) {
-  var options = {
+async function createCourse(data) {
+  let options = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)
   };
-  fetch(URLAPI, options)
-    .then(function (response) {
-      response.json();
-    })
-    .then(callback);
+  await fetch(URLAPI, options);
+
 }
 // -------------Submit-PUSH-DATAAPI--------------
-function handleSubmit() {
-  submit.onclick = function () {
-    var formData = {
-      FristName: fname.value,
-      LastName: lname.value,
-      PatientAge: age.value,
-      PreferedName: nickname.value,
-      PatientGender: gender.value,
-      SpouceName: spoucename.value,
-      WithWhomeDoYouLive: live.value,
-      MaritalStatus: checkValueStatus,
-      MaritalStatusOther: statusother.value,
-      Occupation: occupation.value,
-      Retired: checkValueRetired,
-      Disability: checkValueDisability,
-      WhoIsYourPrimaryCareDocter: doctor.value,
-      WhereIsYourPrimaryCareDoctorLocated: doctorlocated.value,
-      PhoneNumberOfPrimaryCareDoctor: phonedoctor.value,
-      AllergicToAnyMedications: checkValueSex,
-      DoYouSmoke: checkValueSmoke,
-      Stop: stop.value,
-      DrinkAlcohol: alcohol.value,
-      PersonalOpinion: personal.value,
-    };
-    createCourse(formData, async function () {
-      let kq = await getCourses();
-      renderCourses(kq);
-    });
-  }
+submit.onclick = async function () {
+  const formData = {
+    FristName: fname.value,
+    LastName: lname.value,
+    PatientAge: age.value,
+    PreferedName: nickname.value,
+    PatientGender: gender.value,
+    SpouceName: spoucename.value,
+    WithWhomeDoYouLive: live.value,
+    MaritalStatus: checkValueStatus,
+    MaritalStatusOther: statusother.value,
+    Occupation: occupation.value,
+    Retired: checkValueRetired,
+    Disability: checkValueDisability,
+    WhoIsYourPrimaryCareDocter: doctor.value,
+    WhereIsYourPrimaryCareDoctorLocated: doctorlocated.value,
+    PhoneNumberOfPrimaryCareDoctor: phonedoctor.value,
+    AllergicToAnyMedications: checkValueSex,
+    DoYouSmoke: checkValueSmoke,
+    Stop: stop.value,
+    DrinkAlcohol: alcohol.value,
+    PersonalOpinion: personal.value,
+  };
+  await createCourse(formData);
+  let kq = await getCourses();
+  renderCourses(kq);
 }
