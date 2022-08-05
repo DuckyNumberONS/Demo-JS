@@ -303,7 +303,7 @@ function renderCourses(courses) {
   datalist.innerHTML = htmls.join('');
 }
 // -------------CreateCourse--------------
-async function createCourse(data) {
+function createCourse(data) {
   const options = {
     method: 'POST',
     headers: {
@@ -311,7 +311,7 @@ async function createCourse(data) {
     },
     body: JSON.stringify(data)
   };
-  await fetch(URLAPI, options);
+  return fetch(URLAPI, options);
 
 }
 // -------------Submit-PUSH-DATAAPI--------------
